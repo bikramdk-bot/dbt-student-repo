@@ -1,0 +1,24 @@
+models:
+  - name: dim_listings_cleansed
+    columns:
+      - name: listing_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_hosts_cleansed
+    columns:
+      - name: host_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: host_name
+        data_tests:
+          - not_null
+
+      - name: is_superhost
+        data_tests:
+          - accepted_values:
+              values: ['t', 'f']
+    
