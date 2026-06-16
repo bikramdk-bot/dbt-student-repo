@@ -1,24 +1,46 @@
 models:
   - name: dim_listings_cleansed
+    data_tests:
+    - minimum_row_count:
+              min_row_count: 100
     columns:
       - name: listing_id
         data_tests:
           - unique
           - not_null
-
+      - name: minimum_nights
+        data_tests:
+          - positive_values
+            
   - name: dim_hosts_cleansed
+    data_tests:
+      - minimum_row_count:
+          min_row_count: 1000
+    config:
+      contract:
+        enforced: true
     columns:
       - name: host_id
+        data_type: integer
         data_tests:
           - unique
           - not_null
-
       - name: host_name
+        data_type: string
         data_tests:
           - not_null
-
       - name: is_superhost
+        data_type: string
         data_tests:
           - accepted_values:
               values: ['t', 'f']
+      - name: created_at
+        data_type: timestamp
+        data_tests:
+          - not_null
+      - name: updated_at
+        data_type: timestamp
+        data_tests:
+          - not_null
+
     
