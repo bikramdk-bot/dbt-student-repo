@@ -19,6 +19,9 @@ models:
     config:
       contract:
         enforced: true
+      contraints:
+        - type: primary_key
+          columns: ['host_id']
     columns:
       - name: host_id
         data_type: integer
