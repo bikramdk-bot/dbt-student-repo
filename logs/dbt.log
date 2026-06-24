@@ -155,3 +155,18 @@ Runtime Error
 [0m11:11:26.880306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F8BD862C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F8CD70950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F8BBFB570>]}
 [0m11:11:26.880697 [debug] [MainThread]: Flushing usage events
 [0m11:11:27.933815 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:23:59.827717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD9DD638C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD9F1BFD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD9F1BF890>]}
+
+
+============================== 10:23:59.833040 | 2a48a9b2-f24c-4d08-8768-fd3ccd48409c ==============================
+[0m10:23:59.833040 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:23:59.833642 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Ajeet\\.dbt', 'invocation_command': 'dbt seed --select seed_full_moon_dates', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:23:59.834108 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Ajeet\Desktop\dbt-student-repo\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:23:59.835254 [debug] [MainThread]: Command `dbt seed` failed at 10:23:59.835136 after 0.16 seconds
+[0m10:23:59.835592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD9F1D62C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA0204950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD9F04F570>]}
+[0m10:23:59.835955 [debug] [MainThread]: Flushing usage events
+[0m10:24:00.315476 [debug] [MainThread]: An error was encountered while trying to flush usage events
